@@ -1,0 +1,103 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#fff;font-family:"Liberation Sans",Arial,sans-serif;color:#1b1b1b}
+.fig{width:1280px;padding:28px 32px 26px;background:#fff}
+.head{display:flex;align-items:baseline;gap:12px;margin-bottom:18px}
+.tag{font-weight:700;font-size:22px}
+.title{font-size:22px;font-weight:700}
+.sub{font-size:14.5px;color:#555;margin-bottom:18px}
+.flow{display:grid;grid-template-columns:1fr 34px 1fr 34px 1fr 34px 1.12fr;align-items:stretch}
+.arrow{display:flex;align-items:center;justify-content:center}
+.card{border:1.3px solid #9a9a9a;border-radius:6px;display:flex;flex-direction:column;background:#fff}
+.card h3{font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;padding:8px 12px;border-bottom:1.3px solid #9a9a9a;background:#f1f1ee;border-radius:6px 6px 0 0;display:flex;gap:8px;align-items:center}
+.num{display:inline-flex;width:20px;height:20px;border-radius:50%;background:#1b1b1b;color:#fff;font-size:12px;align-items:center;justify-content:center;letter-spacing:0}
+.body{padding:12px;display:flex;flex-direction:column;gap:10px;flex:1}
+.role{font-size:11.5px;color:#666;text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px}
+.msg{font-size:15px;line-height:1.36;background:#f6f6f3;border-left:3px solid #9a9a9a;padding:8px 10px;font-style:italic}
+.quote{font-size:15px;line-height:1.38}
+.lab{font-family:"JetBrains Mono","Liberation Mono",monospace;font-size:13px;padding:2px 6px;border-radius:3px;background:#ececec;white-space:nowrap}
+.row{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:14px}
+.ok{color:#1e7a34;font-weight:700}.no{color:#c0271f;font-weight:700}
+.hidden{border:1.3px dashed #9a9a9a;background:#fff;color:#888}
+.note{font-size:12.5px;color:#666}
+.pill{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:3px 8px;border-radius:10px}
+.pill.red{background:#fbe6e4;color:#b3261e}.pill.grey{background:#ececec;color:#444}
+.bullet{border:1.6px solid #c0271f;background:#fdf1f0;border-radius:4px;padding:8px 10px;font-size:14.5px;line-height:1.36}
+.bullet b{color:#b3261e;font-size:12px;letter-spacing:.04em;text-transform:uppercase;display:block;margin-bottom:3px}
+.ghost{height:9px;background:#e4e4e0;border-radius:2px}
+.ghosts{display:flex;flex-direction:column;gap:6px}
+table{border-collapse:collapse;width:100%;font-size:14px}
+td{padding:5px 0;border-top:1px solid #dcdcd8;vertical-align:middle}
+td{white-space:nowrap}td:last-child{text-align:right}
+tr.hit td{background:#fdf1f0}
+tr.hit td:first-child{font-weight:700}
+.bottom{display:grid;grid-template-columns:1.25fr 1fr;gap:26px;margin-top:20px;align-items:stretch}
+.abl{border:1.3px solid #9a9a9a;border-radius:6px;padding:12px 14px}
+.abl h4,.take h4{font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px}
+.bar{display:grid;grid-template-columns:210px 1fr 62px;align-items:center;gap:10px;font-size:14px;margin:6px 0}
+.track{height:16px;background:#f0f0ec;position:relative}
+.fill{height:16px;background:#8c8c88}
+.fill.red{background:#c0271f}.fill.green{background:#1e7a34}
+.val{font-family:"JetBrains Mono",monospace;font-size:13.5px;text-align:right}
+.take{border-left:4px solid #1b1b1b;padding:4px 0 4px 16px;display:flex;flex-direction:column;justify-content:center}
+.take p{font-size:17px;line-height:1.4}
+</style></head><body><div id="root"></div><script>
+const A=`<svg width="30" height="16" viewBox="0 0 30 16"><path d="M0 8H24" stroke="#1b1b1b" stroke-width="1.6"/><path d="M20 2l8 6-8 6z" fill="#1b1b1b"/></svg>`;
+const mark=ok=>ok?'<span class="ok">✓</span>':'<span class="no">✗</span>';
+const F={
+1:{tag:'Finding 1',title:'Without labels, reflection overturns a correct answer',
+ sub:'One build example traced through the unlabelled run (Playbook C) to a test query. gpt-4o-mini, Banking77, 7 transfer intents.',
+ q:'When I tried to transfer funds to my friend today I was unable to do so, why?',
+ pred:'failed_transfer',predOk:true,gold:'failed_transfer',goldHidden:true,
+ rh:'Reflector · no label',refl:'“<span class="lab">failed_transfer</span> may not be the most accurate choice since the customer did not explicitly state that the transfer failed.”',pill:'False doubt',
+ pb:'Playbook C',bullet:'If a customer is unable to transfer funds, it may indicate that the transfer is still pending rather than failed.',others:'+ 33 other bullets',
+ tq:'My transfer did not seem to work.',tgold:'failed_transfer',
+ rows:[['No playbook','failed_transfer',true,false],['B · labels','failed_transfer',true,false],['C · no labels','pending_transfer',false,true]],
+ tnote:'',
+ bars:[['No playbook',37,''],['Playbook C',35,'red'],['Playbook C − 2 bullets',36,'green']],
+ anote:'This bullet and one similar bullet removed, chosen after seeing the results. A second affected query stays wrong.',
+ take:'With no signal that the answer was right, the Reflector still finds a flaw, and the doubt is written into the playbook as a rule.'},
+2:{tag:'Finding 2',title:'With labels, one ambiguous example becomes a general rule',
+ sub:'One build example traced through the labelled run (Playbook B) to a test query. gpt-4o-mini, Banking77, 7 transfer intents.',
+ q:'… Why does it keep rejecting my transfer? There’s no reason, all my info is correct …',
+ pred:'declined_transfer',predOk:false,gold:'failed_transfer',goldHidden:false,
+ rh:'Reflector · sees label',refl:'“<span class="lab">failed_transfer</span> indicates that the transfer did not go through for unspecified reasons, which aligns more closely with the customer’s message.”',pill:'Rationalises the label',
+ pb:'Playbook B',bullet:'If the customer believes their information is correct and expresses confusion about the rejection, lean towards <span class="lab">failed_transfer</span> rather than <span class="lab">declined_transfer</span>.',others:'+ 23 other bullets',
+ tq:'Why would my transfer be declined? I’ve checked that I’ve put in all the right details, but it is still declined.',tgold:'declined_transfer',
+ rows:[['No playbook','declined_transfer',true,false],['B · labels','failed_transfer',false,true],['C · no labels','declined_transfer',true,false]],
+ tnote:'One more “declined” query fails the same way.',
+ bars:[['No playbook',37,''],['Playbook B',35,'red'],['Playbook B − 1 bullet',37,'green']],
+ anote:'This one bullet removed, chosen after seeing the results. Both queries recover; no other prediction changes.',
+ take:'The label was accepted, but the rule keyed on an incidental detail. One example was enough to override the word “declined” in new queries.'}};
+const f=F[new URLSearchParams(location.search).get('f')||1];
+document.getElementById('root').innerHTML=`<div class="fig" id="fig">
+<div class="head"><span class="title">${f.tag}: ${f.title}</span></div>
+<div class="flow">
+ <div class="card"><h3><span class="num">1</span>Build example</h3><div class="body">
+  <div><div class="role">Customer</div><div class="msg">${f.q}</div></div>
+  <div class="row"><span>Generator</span><span><span class="lab">${f.pred}</span> ${mark(f.predOk)}</span></div>
+  <div class="row"><span>Gold label</span><span class="lab ${f.goldHidden?'hidden':''}">${f.gold}</span></div>
+  <div class="note">${f.goldHidden?'Gold label is hidden from the Reflector.':'Gold label is shown to the Reflector. The customer describes a rejection, so the label is debatable.'}</div>
+ </div></div><div class="arrow">${A}</div>
+ <div class="card"><h3><span class="num">2</span>${f.rh}</h3><div class="body">
+  <div class="quote">${f.refl}</div><span class="pill red">${f.pill}</span>
+ </div></div><div class="arrow">${A}</div>
+ <div class="card"><h3><span class="num">3</span>${f.pb}</h3><div class="body">
+  <div class="bullet"><b>New bullet</b>${f.bullet}</div>
+  <div class="ghosts"><div class="ghost" style="width:92%"></div><div class="ghost" style="width:78%"></div><div class="ghost" style="width:85%"></div></div>
+  <div class="note">${f.others}</div>
+ </div></div><div class="arrow">${A}</div>
+ <div class="card"><h3><span class="num">4</span>Unseen test query</h3><div class="body">
+  <div><div class="role">Customer</div><div class="msg">${f.tq}</div></div>
+  <div class="row"><span>Gold label</span><span class="lab">${f.tgold}</span></div>
+  <table>${f.rows.map(r=>`<tr class="${r[3]?'hit':''}"><td>${r[0]}</td><td><span class="lab">${r[1]}</span> ${mark(r[2])}</td></tr>`).join('')}</table>
+  ${f.tnote?`<div class="note">${f.tnote}</div>`:''}
+ </div></div>
+</div>
+<div class="bottom">
+ <div class="abl"><h4>Post-hoc check: accuracy on 49 test queries</h4>
+  ${f.bars.map(b=>`<div class="bar"><span>${b[0]}</span><div class="track"><div class="fill ${b[2]}" style="width:${b[1]/49*100}%"></div></div><span class="val">${b[1]} / 49</span></div>`).join('')}
+  <div class="note" style="margin-top:8px">${f.anote}</div></div>
+ <div class="take"><h4>Risk</h4><p>${f.take}</p></div>
+</div></div>`;
+</script></body></html>

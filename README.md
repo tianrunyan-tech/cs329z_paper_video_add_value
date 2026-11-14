@@ -45,6 +45,10 @@ Accuracy did not differ. Tracing the new errors showed two failure patterns:
 - **Without labels, the Reflector doubted correct answers.** It wrote rules such as *"If a customer is unable to transfer funds, it may indicate that the transfer is still pending rather than failed"* from questions the model had answered correctly.
 - **With labels, one ambiguous example became a general rule.** One build question was labelled `failed_transfer` although the customer described a rejection. The Reflector turned it into a rule that later misclassified two explicit "declined" questions.
 
+![Finding 1](figures/finding_1.png)
+
+![Finding 2](figures/finding_2.png)
+
 Post-hoc check: removing the suspect bullet from B restored both questions (35 → 37). Removing two suspect bullets from C restored one of two (35 → 36). These bullets were chosen after seeing the results, so this supports the explanation for these cases only.
 
 **Limitations:** small sample and a single run; failure cases were analysed individually; offline setting only; different task and model from the paper.
@@ -76,6 +80,8 @@ Every model call is cached in `out/cache_*.jsonl`, so rerunning with this folder
 | `out/test_results.json` | Per-question predictions for A, B and C |
 | `out/paired.json` | Per-question changes against the baseline |
 | `out/ablation_results.json` | Predictions after removing the suspect bullets |
+| `figures/finding_1.png`, `figures/finding_2.png` | The two error-chain figures used in the presentation |
+| `figures/findings.html`, `figures/render.js` | Figure source; `node figures/render.js` re-renders the PNGs (needs Playwright) |
 | `out/pilot.json`, `out/cache_*.jsonl` | Pilot answers; cached model calls (including two other models tried in the pilot) |
 
 Banking77 is released by PolyAI under CC BY 4.0.
