@@ -1,0 +1,1184 @@
+{
+  "A": [
+    {
+      "text": "How do I contact customer support about a transfer?",
+      "label": "declined_transfer",
+      "id": "test-00",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is seeking information on how to reach customer support regarding a transfer, which does not fit into any of the specified intent labels.",
+      "correct": false
+    },
+    {
+      "text": "Why did my my transfer get declined?",
+      "label": "declined_transfer",
+      "id": "test-01",
+      "pred": "declined_transfer",
+      "reasoning": "The customer is inquiring about the reason for their transfer being declined, which directly relates to the status of the transfer.",
+      "correct": true
+    },
+    {
+      "text": "The  money I transferred does not show in the balance.",
+      "label": "balance_not_updated_after_bank_transfer",
+      "id": "test-02",
+      "pred": "balance_not_updated_after_bank_transfer",
+      "reasoning": "The customer is indicating that their balance has not been updated after a bank transfer, which suggests an issue with the transfer reflecting in their account balance.",
+      "correct": true
+    },
+    {
+      "text": "I made an error in payment yesterday and I need it fixed asap because it's for my rent tomorrow.",
+      "label": "cancel_transfer",
+      "id": "test-03",
+      "pred": "cancel_transfer",
+      "reasoning": "The customer is requesting to fix an error in a payment, which implies they want to cancel or modify a transfer that has already been initiated.",
+      "correct": true
+    },
+    {
+      "text": "How many days does it take until funds are in my account?",
+      "label": "transfer_timing",
+      "id": "test-04",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the duration it takes for funds to be available in their account after a transfer, which relates to the timing of the transfer.",
+      "correct": true
+    },
+    {
+      "text": "My transfer is still coming up as pending.",
+      "label": "pending_transfer",
+      "id": "test-05",
+      "pred": "pending_transfer",
+      "reasoning": "The customer is inquiring about the status of their transfer, indicating that it has not yet been completed and is still pending.",
+      "correct": true
+    },
+    {
+      "text": "I would like to know why my transfer was declined.",
+      "label": "declined_transfer",
+      "id": "test-06",
+      "pred": "declined_transfer",
+      "reasoning": "The customer is inquiring about the reason for their transfer being declined, which directly relates to the intent of understanding a declined transaction.",
+      "correct": true
+    },
+    {
+      "text": "My transfer has been declined and I know it should have went through.",
+      "label": "declined_transfer",
+      "id": "test-07",
+      "pred": "declined_transfer",
+      "reasoning": "The customer is indicating that their transfer was not successful and believes it should have been, which aligns with the intent of a declined transfer.",
+      "correct": true
+    },
+    {
+      "text": "I'd like to cancel a transfer",
+      "label": "cancel_transfer",
+      "id": "test-08",
+      "pred": "cancel_transfer",
+      "reasoning": "The customer explicitly states their intention to cancel a transfer, which directly corresponds to the cancel_transfer intent.",
+      "correct": true
+    },
+    {
+      "text": "I made a bank transfer and my account balance did not show it.",
+      "label": "balance_not_updated_after_bank_transfer",
+      "id": "test-09",
+      "pred": "balance_not_updated_after_bank_transfer",
+      "reasoning": "The customer is indicating that their account balance has not been updated after a bank transfer, which suggests an issue with the balance reflecting the transfer. This aligns with the label for balance not updated after a bank transfer.",
+      "correct": true
+    },
+    {
+      "text": "I want to go back on what I did this morning",
+      "label": "cancel_transfer",
+      "id": "test-10",
+      "pred": "cancel_transfer",
+      "reasoning": "The customer is indicating a desire to reverse or cancel a previous action, likely related to a transfer they initiated earlier.",
+      "correct": true
+    },
+    {
+      "text": "I am still waiting for a transaction to be completed",
+      "label": "transfer_not_received_by_recipient",
+      "id": "test-11",
+      "pred": "pending_transfer",
+      "reasoning": "The customer is inquiring about the status of a transaction that has not yet been completed, indicating they are waiting for it to finalize.",
+      "correct": false
+    },
+    {
+      "text": "How many days does a transfer from the US take?",
+      "label": "transfer_timing",
+      "id": "test-12",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the duration it takes for a transfer to be completed, which relates to the timing of the transfer.",
+      "correct": true
+    },
+    {
+      "text": "When I submit a transfer, it is being declined.  The information I put in has been reviewed.",
+      "label": "declined_transfer",
+      "id": "test-13",
+      "pred": "declined_transfer",
+      "reasoning": "The customer is indicating that their transfer is not going through due to a decline, despite having reviewed the information provided. This directly relates to the intent of a transfer being declined.",
+      "correct": true
+    },
+    {
+      "text": "I would like to know why my payment is still pending, can you help?",
+      "label": "pending_transfer",
+      "id": "test-14",
+      "pred": "pending_transfer",
+      "reasoning": "The customer is inquiring about the status of a payment that has not yet been completed, indicating a pending situation.",
+      "correct": true
+    },
+    {
+      "text": "Why is my transfer not done yet?",
+      "label": "pending_transfer",
+      "id": "test-15",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the status of their transfer, indicating they are waiting for it to be completed.",
+      "correct": false
+    },
+    {
+      "text": "Please help me make a transfer. I keep receiving an error and I'm trying to make the initial mortgage payment for a flat I'm buying. What is the deal here?",
+      "label": "failed_transfer",
+      "id": "test-16",
+      "pred": "failed_transfer",
+      "reasoning": "The customer is experiencing an error while trying to make a transfer, indicating that the transfer is not being completed successfully.",
+      "correct": true
+    },
+    {
+      "text": "I am still awaiting the completion of the transaction.",
+      "label": "transfer_not_received_by_recipient",
+      "id": "test-17",
+      "pred": "pending_transfer",
+      "reasoning": "The customer is inquiring about the status of a transaction that has not yet been completed, indicating they are waiting for it to finalize.",
+      "correct": false
+    },
+    {
+      "text": "When will I see my new balance after making my bank transfer?",
+      "label": "balance_not_updated_after_bank_transfer",
+      "id": "test-18",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the timing of when their balance will be updated after a bank transfer, which relates to the timing of the transfer.",
+      "correct": false
+    },
+    {
+      "text": "Where is the transfer I started?",
+      "label": "transfer_not_received_by_recipient",
+      "id": "test-19",
+      "pred": "pending_transfer",
+      "reasoning": "The customer is inquiring about the status of a transfer they initiated, which suggests they are looking for information on its current state.",
+      "correct": false
+    },
+    {
+      "text": "Hello I made a bank transfer couple hours ago from my UK account but it doesn't show up yet. Can you please check if everything is alright with it?",
+      "label": "balance_not_updated_after_bank_transfer",
+      "id": "test-20",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the status of a bank transfer that they made a few hours ago, indicating they are concerned about its timing and whether it has been processed correctly.",
+      "correct": false
+    },
+    {
+      "text": "I made a transfer a few hours ago from a UK banking account.  I do not yet see the transfer.  Please check on this for me.",
+      "label": "balance_not_updated_after_bank_transfer",
+      "id": "test-21",
+      "pred": "transfer_not_received_by_recipient",
+      "reasoning": "The customer is inquiring about the status of a transfer they made a few hours ago and is concerned that it has not yet been received.",
+      "correct": false
+    },
+    {
+      "text": "transaction failed?",
+      "label": "transfer_not_received_by_recipient",
+      "id": "test-22",
+      "pred": "failed_transfer",
+      "reasoning": "The customer is inquiring about a transaction that did not go through, indicating a problem with the transfer process.",
+      "correct": false
+    },
+    {
+      "text": "How long until the money is in my account?",
+      "label": "transfer_timing",
+      "id": "test-23",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the duration it takes for a transfer to be completed and reflected in their account.",
+      "correct": true
+    },
+    {
+      "text": "How long does it take for a money transfer to show?",
+      "label": "pending_transfer",
+      "id": "test-24",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the duration it takes for a money transfer to be reflected in their account, which relates to the timing of the transfer.",
+      "correct": false
+    },
+    {
+      "text": "I have a pending transfer",
+      "label": "pending_transfer",
+      "id": "test-25",
+      "pred": "pending_transfer",
+      "reasoning": "The customer is indicating that there is a transfer that has not yet been completed, which falls under the category of pending transfers.",
+      "correct": true
+    },
+    {
+      "text": "Why isn't the transfer on my account showing up?",
+      "label": "balance_not_updated_after_bank_transfer",
+      "id": "test-26",
+      "pred": "transfer_not_received_by_recipient",
+      "reasoning": "The customer is inquiring about a transfer that is not appearing in their account, which suggests they are concerned about the status of a transfer that has not been received or updated.",
+      "correct": false
+    },
+    {
+      "text": "Why did a transfer get declined?",
+      "label": "declined_transfer",
+      "id": "test-27",
+      "pred": "declined_transfer",
+      "reasoning": "The customer is inquiring about the reason for a transfer being declined, which directly relates to the status of the transfer.",
+      "correct": true
+    },
+    {
+      "text": "My transfer hasn't gone through yet.",
+      "label": "pending_transfer",
+      "id": "test-28",
+      "pred": "pending_transfer",
+      "reasoning": "The customer is inquiring about the status of their transfer, indicating that it has not been completed.",
+      "correct": true
+    },
+    {
+      "text": "My transfer is pending.",
+      "label": "balance_not_updated_after_bank_transfer",
+      "id": "test-29",
+      "pred": "pending_transfer",
+      "reasoning": "The customer is indicating that their transfer has not yet completed and is still in the process of being finalized.",
+      "correct": false
+    },
+    {
+      "text": "I submitted a transaction to the incorrect account.",
+      "label": "cancel_transfer",
+      "id": "test-30",
+      "pred": "cancel_transfer",
+      "reasoning": "The customer is indicating that they want to reverse or stop a transaction that was sent to the wrong account, which aligns with the intent to cancel a transfer.",
+      "correct": true
+    },
+    {
+      "text": "My transfer will not go through.",
+      "label": "failed_transfer",
+      "id": "test-31",
+      "pred": "failed_transfer",
+      "reasoning": "The customer is indicating that their transfer is not successful, which aligns with a failed transaction.",
+      "correct": true
+    },
+    {
+      "text": "Why was I not able to complete a transfer?",
+      "label": "failed_transfer",
+      "id": "test-32",
+      "pred": "failed_transfer",
+      "reasoning": "The customer is inquiring about the inability to complete a transfer, which suggests that the transfer was not successful.",
+      "correct": true
+    },
+    {
+      "text": "If I need to do a quick transfer from China, how long should I expect the transfer to take?",
+      "label": "transfer_timing",
+      "id": "test-33",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the duration of a transfer, which relates to the timing of the transfer process.",
+      "correct": true
+    },
+    {
+      "text": "I need help cancelling a transaction.",
+      "label": "cancel_transfer",
+      "id": "test-34",
+      "pred": "cancel_transfer",
+      "reasoning": "The customer is requesting assistance with cancelling a transaction, which directly aligns with the intent of cancelling a transfer.",
+      "correct": true
+    },
+    {
+      "text": "My transfer did not go through.",
+      "label": "failed_transfer",
+      "id": "test-35",
+      "pred": "failed_transfer",
+      "reasoning": "The customer indicates that their transfer was unsuccessful, which aligns with a failed transaction.",
+      "correct": true
+    },
+    {
+      "text": "The receipient doesn't see my money transfer.",
+      "label": "transfer_not_received_by_recipient",
+      "id": "test-36",
+      "pred": "transfer_not_received_by_recipient",
+      "reasoning": "The customer is indicating that the recipient has not received the money transfer, which suggests an issue with the transfer process.",
+      "correct": true
+    },
+    {
+      "text": "Why hasn't my recipient received their money?",
+      "label": "transfer_not_received_by_recipient",
+      "id": "test-37",
+      "pred": "transfer_not_received_by_recipient",
+      "reasoning": "The customer is inquiring about the status of a transfer that has not been received by the intended recipient.",
+      "correct": true
+    },
+    {
+      "text": "Why did my transfer not go through?",
+      "label": "failed_transfer",
+      "id": "test-38",
+      "pred": "failed_transfer",
+      "reasoning": "The customer is inquiring about a transfer that did not complete successfully, indicating a problem with the transfer process.",
+      "correct": true
+    },
+    {
+      "text": "I completed an in country transfer a few days ago and was sure to check the account information several times since the transaction was completed, but the funds are still not available. What is the problem?",
+      "label": "transfer_not_received_by_recipient",
+      "id": "test-39",
+      "pred": "transfer_not_received_by_recipient",
+      "reasoning": "The customer is inquiring about the status of a transfer that has not resulted in the expected availability of funds, indicating a potential issue with the transfer process.",
+      "correct": true
+    },
+    {
+      "text": "How long do I have to wait for a transfer from the US?",
+      "label": "transfer_timing",
+      "id": "test-40",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the duration it takes for a transfer to be completed, which relates to the timing of the transfer.",
+      "correct": true
+    },
+    {
+      "text": "Why would my transfer be declined? I've checked that I've put in all the right details, but it is still declined.",
+      "label": "declined_transfer",
+      "id": "test-41",
+      "pred": "declined_transfer",
+      "reasoning": "The customer is inquiring about the reasons for their transfer being declined despite entering the correct details, which directly relates to the intent of a declined transfer.",
+      "correct": true
+    },
+    {
+      "text": "Why has my transfer failed?",
+      "label": "failed_transfer",
+      "id": "test-42",
+      "pred": "failed_transfer",
+      "reasoning": "The customer is inquiring about the reason for their transfer not being successful, which indicates a failed transaction.",
+      "correct": true
+    },
+    {
+      "text": "How long does it take to process transfers from Europe?",
+      "label": "transfer_timing",
+      "id": "test-43",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the duration it takes for transfers to be processed, which relates to the timing of transfers.",
+      "correct": true
+    },
+    {
+      "text": "Approximately how long will an urgent transfer from China take?",
+      "label": "transfer_timing",
+      "id": "test-44",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the duration it takes for a transfer to be completed, which relates to the timing of the transfer.",
+      "correct": true
+    },
+    {
+      "text": "My transfer did not seem to work.",
+      "label": "failed_transfer",
+      "id": "test-45",
+      "pred": "failed_transfer",
+      "reasoning": "The customer is indicating that their transfer was unsuccessful, which suggests a problem with the transfer process.",
+      "correct": true
+    },
+    {
+      "text": "I double checked that I have the correct account details , they're right for sure. Transfer is still pending since forever. What should be done now?",
+      "label": "pending_transfer",
+      "id": "test-46",
+      "pred": "pending_transfer",
+      "reasoning": "The customer is inquiring about a transfer that is still pending, indicating they are looking for information on the status of their transfer.",
+      "correct": true
+    },
+    {
+      "text": "I made a mistake with a transaction!",
+      "label": "cancel_transfer",
+      "id": "test-47",
+      "pred": "cancel_transfer",
+      "reasoning": "The customer is indicating that they want to address an issue with a transaction they initiated, which suggests they may want to cancel it.",
+      "correct": true
+    },
+    {
+      "text": "Is there any way to cancel a transfer?",
+      "label": "cancel_transfer",
+      "id": "test-48",
+      "pred": "cancel_transfer",
+      "reasoning": "The customer is inquiring about the process to cancel a transfer, which directly relates to the intent of canceling a transfer.",
+      "correct": true
+    }
+  ],
+  "B": [
+    {
+      "text": "How do I contact customer support about a transfer?",
+      "label": "declined_transfer",
+      "id": "test-00",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about how to reach customer support regarding a transfer, which does not fit any of the specific intent labels related to transfer issues.",
+      "correct": false
+    },
+    {
+      "text": "Why did my my transfer get declined?",
+      "label": "declined_transfer",
+      "id": "test-01",
+      "pred": "declined_transfer",
+      "reasoning": "The customer is explicitly asking about the reason for their transfer being declined, which indicates that the transfer attempt was actively rejected. Therefore, it should be classified as 'declined_transfer'.",
+      "correct": true
+    },
+    {
+      "text": "The  money I transferred does not show in the balance.",
+      "label": "balance_not_updated_after_bank_transfer",
+      "id": "test-02",
+      "pred": "balance_not_updated_after_bank_transfer",
+      "reasoning": "The customer is expressing concern that their account balance has not been updated to reflect a completed transfer, indicating a balance issue rather than a transfer receipt issue.",
+      "correct": true
+    },
+    {
+      "text": "I made an error in payment yesterday and I need it fixed asap because it's for my rent tomorrow.",
+      "label": "cancel_transfer",
+      "id": "test-03",
+      "pred": "cancel_transfer",
+      "reasoning": "The customer explicitly states they need to fix an error in payment, indicating a desire to reverse or cancel the transaction. This aligns with the intent to cancel a transfer rather than inquire about its status.",
+      "correct": true
+    },
+    {
+      "text": "How many days does it take until funds are in my account?",
+      "label": "transfer_timing",
+      "id": "test-04",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the duration it takes for funds to arrive in their account without mentioning any specific status of a transfer, which aligns with the intent of asking about timing.",
+      "correct": true
+    },
+    {
+      "text": "My transfer is still coming up as pending.",
+      "label": "pending_transfer",
+      "id": "test-05",
+      "pred": "pending_transfer",
+      "reasoning": "The customer explicitly states that their transfer is 'pending', which directly indicates the status of the transfer.",
+      "correct": true
+    },
+    {
+      "text": "I would like to know why my transfer was declined.",
+      "label": "declined_transfer",
+      "id": "test-06",
+      "pred": "declined_transfer",
+      "reasoning": "The customer is explicitly asking about the reason for their transfer being declined, which indicates that the transfer attempt was actively rejected.",
+      "correct": true
+    },
+    {
+      "text": "My transfer has been declined and I know it should have went through.",
+      "label": "declined_transfer",
+      "id": "test-07",
+      "pred": "declined_transfer",
+      "reasoning": "The customer explicitly states that their transfer has been declined and expresses certainty that it should have gone through, indicating a specific rejection rather than a general failure.",
+      "correct": true
+    },
+    {
+      "text": "I'd like to cancel a transfer",
+      "label": "cancel_transfer",
+      "id": "test-08",
+      "pred": "cancel_transfer",
+      "reasoning": "The customer explicitly states their intention to cancel a transfer, which directly aligns with the 'cancel_transfer' label.",
+      "correct": true
+    },
+    {
+      "text": "I made a bank transfer and my account balance did not show it.",
+      "label": "balance_not_updated_after_bank_transfer",
+      "id": "test-09",
+      "pred": "balance_not_updated_after_bank_transfer",
+      "reasoning": "The customer is expressing concern that their account balance has not been updated to reflect a completed transfer, indicating a balance issue rather than a transfer receipt issue.",
+      "correct": true
+    },
+    {
+      "text": "I want to go back on what I did this morning",
+      "label": "cancel_transfer",
+      "id": "test-10",
+      "pred": "cancel_transfer",
+      "reasoning": "The customer is expressing a desire to reverse or cancel a transaction they initiated, which indicates a request to stop the transaction altogether.",
+      "correct": true
+    },
+    {
+      "text": "I am still waiting for a transaction to be completed",
+      "label": "transfer_not_received_by_recipient",
+      "id": "test-11",
+      "pred": "pending_transfer",
+      "reasoning": "The customer explicitly states they are waiting for a transaction to be completed, indicating that the transfer is currently ongoing and has not yet finished.",
+      "correct": false
+    },
+    {
+      "text": "How many days does a transfer from the US take?",
+      "label": "transfer_timing",
+      "id": "test-12",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the expected duration for a transfer without mentioning any specific status or urgency, which aligns with the definition of 'transfer_timing'.",
+      "correct": true
+    },
+    {
+      "text": "When I submit a transfer, it is being declined.  The information I put in has been reviewed.",
+      "label": "declined_transfer",
+      "id": "test-13",
+      "pred": "failed_transfer",
+      "reasoning": "The customer explicitly states that their transfer is being declined and mentions that their information has been reviewed, indicating confusion about the rejection. This aligns with the criteria for 'failed_transfer' as the reason for failure is unclear.",
+      "correct": false
+    },
+    {
+      "text": "I would like to know why my payment is still pending, can you help?",
+      "label": "pending_transfer",
+      "id": "test-14",
+      "pred": "pending_transfer",
+      "reasoning": "The customer explicitly states that their payment is 'still pending', indicating they are inquiring about the status of an ongoing transfer that has not yet completed.",
+      "correct": true
+    },
+    {
+      "text": "Why is my transfer not done yet?",
+      "label": "pending_transfer",
+      "id": "test-15",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the status of a transfer that has already been initiated, indicating they are concerned about the timing of its completion.",
+      "correct": false
+    },
+    {
+      "text": "Please help me make a transfer. I keep receiving an error and I'm trying to make the initial mortgage payment for a flat I'm buying. What is the deal here?",
+      "label": "failed_transfer",
+      "id": "test-16",
+      "pred": "failed_transfer",
+      "reasoning": "The customer is experiencing an error while attempting to make a transfer, indicating that the transfer cannot be completed. This suggests a failure in the transfer process rather than a rejection due to specific reasons.",
+      "correct": true
+    },
+    {
+      "text": "I am still awaiting the completion of the transaction.",
+      "label": "transfer_not_received_by_recipient",
+      "id": "test-17",
+      "pred": "pending_transfer",
+      "reasoning": "The customer explicitly states they are still awaiting the completion of the transaction, indicating that it is not yet finalized.",
+      "correct": false
+    },
+    {
+      "text": "When will I see my new balance after making my bank transfer?",
+      "label": "balance_not_updated_after_bank_transfer",
+      "id": "test-18",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the timing of when their balance will be updated after a transfer, without indicating any issues with the transfer itself. This aligns with the intent of asking about transfer timing.",
+      "correct": false
+    },
+    {
+      "text": "Where is the transfer I started?",
+      "label": "transfer_not_received_by_recipient",
+      "id": "test-19",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the status of a transfer they initiated, which indicates they are looking for information on its timing rather than expressing concern about receipt or balance updates.",
+      "correct": false
+    },
+    {
+      "text": "Hello I made a bank transfer couple hours ago from my UK account but it doesn't show up yet. Can you please check if everything is alright with it?",
+      "label": "balance_not_updated_after_bank_transfer",
+      "id": "test-20",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the status of a transfer that they initiated a few hours ago and is concerned that it has not yet appeared in their account. This indicates a potential issue with the transfer's timing rather than a balance update issue.",
+      "correct": false
+    },
+    {
+      "text": "I made a transfer a few hours ago from a UK banking account.  I do not yet see the transfer.  Please check on this for me.",
+      "label": "balance_not_updated_after_bank_transfer",
+      "id": "test-21",
+      "pred": "transfer_not_received_by_recipient",
+      "reasoning": "The customer is inquiring about the status of a transfer that they initiated a few hours ago and has not yet been reflected in their account, indicating a concern about the transfer not being received by the recipient.",
+      "correct": false
+    },
+    {
+      "text": "transaction failed?",
+      "label": "transfer_not_received_by_recipient",
+      "id": "test-22",
+      "pred": "failed_transfer",
+      "reasoning": "The customer is inquiring about a transaction that did not complete successfully, indicating a failure in the transfer process.",
+      "correct": false
+    },
+    {
+      "text": "How long until the money is in my account?",
+      "label": "transfer_timing",
+      "id": "test-23",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the duration it will take for the money to arrive in their account without indicating any issues with the transfer itself.",
+      "correct": true
+    },
+    {
+      "text": "How long does it take for a money transfer to show?",
+      "label": "pending_transfer",
+      "id": "test-24",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the duration it takes for a money transfer to be reflected in their account, which aligns with the intent of asking about timing rather than any issues with the transfer itself.",
+      "correct": false
+    },
+    {
+      "text": "I have a pending transfer",
+      "label": "pending_transfer",
+      "id": "test-25",
+      "pred": "pending_transfer",
+      "reasoning": "The customer explicitly states that they have a 'pending transfer', which indicates that the transfer is currently in progress and has not yet completed.",
+      "correct": true
+    },
+    {
+      "text": "Why isn't the transfer on my account showing up?",
+      "label": "balance_not_updated_after_bank_transfer",
+      "id": "test-26",
+      "pred": "balance_not_updated_after_bank_transfer",
+      "reasoning": "The customer is inquiring about the status of a transfer that has already been initiated but is not reflected in their account balance, indicating a concern about their balance not being updated after the transfer.",
+      "correct": true
+    },
+    {
+      "text": "Why did a transfer get declined?",
+      "label": "declined_transfer",
+      "id": "test-27",
+      "pred": "declined_transfer",
+      "reasoning": "The customer is inquiring about the specific reasons for the rejection of a transfer, which indicates that the transfer attempt was actively rejected.",
+      "correct": true
+    },
+    {
+      "text": "My transfer hasn't gone through yet.",
+      "label": "pending_transfer",
+      "id": "test-28",
+      "pred": "pending_transfer",
+      "reasoning": "The customer explicitly states that their transfer hasn't gone through, indicating that it is still in progress and has not completed.",
+      "correct": true
+    },
+    {
+      "text": "My transfer is pending.",
+      "label": "balance_not_updated_after_bank_transfer",
+      "id": "test-29",
+      "pred": "pending_transfer",
+      "reasoning": "The customer explicitly states that their transfer is 'pending', which directly indicates the status of the transfer.",
+      "correct": false
+    },
+    {
+      "text": "I submitted a transaction to the incorrect account.",
+      "label": "cancel_transfer",
+      "id": "test-30",
+      "pred": "cancel_transfer",
+      "reasoning": "The customer is indicating that they want to stop or reverse a transaction that was submitted incorrectly, which aligns with the intent to cancel the transfer.",
+      "correct": true
+    },
+    {
+      "text": "My transfer will not go through.",
+      "label": "failed_transfer",
+      "id": "test-31",
+      "pred": "failed_transfer",
+      "reasoning": "The customer indicates that their transfer is not completing, which suggests a failure in the transfer process rather than a rejection due to specific reasons.",
+      "correct": true
+    },
+    {
+      "text": "Why was I not able to complete a transfer?",
+      "label": "failed_transfer",
+      "id": "test-32",
+      "pred": "failed_transfer",
+      "reasoning": "The customer is expressing confusion about their inability to complete a transfer without specifying a reason, indicating a failure in the transfer process.",
+      "correct": true
+    },
+    {
+      "text": "If I need to do a quick transfer from China, how long should I expect the transfer to take?",
+      "label": "transfer_timing",
+      "id": "test-33",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the expected duration of a transfer without mentioning any current status or urgency regarding a specific transfer, which aligns with the intent of asking about timing.",
+      "correct": true
+    },
+    {
+      "text": "I need help cancelling a transaction.",
+      "label": "cancel_transfer",
+      "id": "test-34",
+      "pred": "cancel_transfer",
+      "reasoning": "The customer explicitly asks for help in cancelling a transaction, which directly indicates their intent to stop the transfer.",
+      "correct": true
+    },
+    {
+      "text": "My transfer did not go through.",
+      "label": "failed_transfer",
+      "id": "test-35",
+      "pred": "failed_transfer",
+      "reasoning": "The customer indicates that their transfer was unsuccessful without specifying a reason, which suggests a failure in the transfer process.",
+      "correct": true
+    },
+    {
+      "text": "The receipient doesn't see my money transfer.",
+      "label": "transfer_not_received_by_recipient",
+      "id": "test-36",
+      "pred": "transfer_not_received_by_recipient",
+      "reasoning": "The customer is indicating that the recipient has not received the funds, which aligns with the intent of questioning the receipt of a transfer rather than the timing or status of the transfer itself.",
+      "correct": true
+    },
+    {
+      "text": "Why hasn't my recipient received their money?",
+      "label": "transfer_not_received_by_recipient",
+      "id": "test-37",
+      "pred": "transfer_not_received_by_recipient",
+      "reasoning": "The customer is inquiring about the status of a transfer and is specifically concerned that the recipient has not received the funds, indicating a potential issue with the transfer's receipt rather than timing.",
+      "correct": true
+    },
+    {
+      "text": "Why did my transfer not go through?",
+      "label": "failed_transfer",
+      "id": "test-38",
+      "pred": "failed_transfer",
+      "reasoning": "The customer is inquiring about a transfer that did not complete successfully, indicating confusion or frustration about the process, which aligns with a failure in the transfer process.",
+      "correct": true
+    },
+    {
+      "text": "I completed an in country transfer a few days ago and was sure to check the account information several times since the transaction was completed, but the funds are still not available. What is the problem?",
+      "label": "transfer_not_received_by_recipient",
+      "id": "test-39",
+      "pred": "balance_not_updated_after_bank_transfer",
+      "reasoning": "The customer is expressing concern that their account balance has not been updated to reflect a completed transfer, indicating that they are worried about their own account status rather than the recipient's receipt of funds.",
+      "correct": false
+    },
+    {
+      "text": "How long do I have to wait for a transfer from the US?",
+      "label": "transfer_timing",
+      "id": "test-40",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the expected duration of a transfer without mentioning any specific status or urgency, which aligns with the intent of asking about timing.",
+      "correct": true
+    },
+    {
+      "text": "Why would my transfer be declined? I've checked that I've put in all the right details, but it is still declined.",
+      "label": "declined_transfer",
+      "id": "test-41",
+      "pred": "failed_transfer",
+      "reasoning": "The customer is expressing confusion about their transfer being declined despite having entered the correct details, indicating a lack of clarity on the reason for the rejection. This aligns with the criteria for a 'failed_transfer' as the reason for failure is unspecified and the customer is frustrated.",
+      "correct": false
+    },
+    {
+      "text": "Why has my transfer failed?",
+      "label": "failed_transfer",
+      "id": "test-42",
+      "pred": "failed_transfer",
+      "reasoning": "The customer is inquiring about the reason for their transfer not being completed, indicating a failure in the transfer process without specifying a rejection reason.",
+      "correct": true
+    },
+    {
+      "text": "How long does it take to process transfers from Europe?",
+      "label": "transfer_timing",
+      "id": "test-43",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the duration for processing transfers without indicating any specific issues with a current transfer, which aligns with the intent of asking about timing.",
+      "correct": true
+    },
+    {
+      "text": "Approximately how long will an urgent transfer from China take?",
+      "label": "transfer_timing",
+      "id": "test-44",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the expected duration of a transfer without mentioning any specific status of the transfer, which aligns with the intent of asking about timing.",
+      "correct": true
+    },
+    {
+      "text": "My transfer did not seem to work.",
+      "label": "failed_transfer",
+      "id": "test-45",
+      "pred": "failed_transfer",
+      "reasoning": "The customer indicates that their transfer did not complete successfully, which suggests a failure in the transfer process.",
+      "correct": true
+    },
+    {
+      "text": "I double checked that I have the correct account details , they're right for sure. Transfer is still pending since forever. What should be done now?",
+      "label": "pending_transfer",
+      "id": "test-46",
+      "pred": "pending_transfer",
+      "reasoning": "The customer explicitly states that the transfer is 'pending' and is seeking guidance on what to do next, which indicates they are inquiring about the status of an ongoing transfer rather than its timing or any other issue.",
+      "correct": true
+    },
+    {
+      "text": "I made a mistake with a transaction!",
+      "label": "cancel_transfer",
+      "id": "test-47",
+      "pred": "cancel_transfer",
+      "reasoning": "The customer is indicating that they want to address an error with a transaction, which suggests they may want to stop or reverse it. This aligns with the intent to cancel the transaction.",
+      "correct": true
+    },
+    {
+      "text": "Is there any way to cancel a transfer?",
+      "label": "cancel_transfer",
+      "id": "test-48",
+      "pred": "cancel_transfer",
+      "reasoning": "The customer is explicitly asking about the possibility of canceling a transfer, which directly indicates their intent to stop the transaction.",
+      "correct": true
+    }
+  ],
+  "C": [
+    {
+      "text": "How do I contact customer support about a transfer?",
+      "label": "declined_transfer",
+      "id": "test-00",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about how to reach customer support regarding a transfer, which does not fit any of the specific intent labels related to transfer issues. Therefore, a broader label is not applicable here.",
+      "correct": false
+    },
+    {
+      "text": "Why did my my transfer get declined?",
+      "label": "declined_transfer",
+      "id": "test-01",
+      "pred": "declined_transfer",
+      "reasoning": "The customer is inquiring about the reason for their transfer being rejected, which aligns with the label for a transfer that was actively rejected by the bank or system.",
+      "correct": true
+    },
+    {
+      "text": "The  money I transferred does not show in the balance.",
+      "label": "balance_not_updated_after_bank_transfer",
+      "id": "test-02",
+      "pred": "balance_not_updated_after_bank_transfer",
+      "reasoning": "The customer is indicating that the transfer has not updated their balance, which suggests an issue with the transfer not being reflected in their account. This aligns with the label for balance not updated after a bank transfer.",
+      "correct": true
+    },
+    {
+      "text": "I made an error in payment yesterday and I need it fixed asap because it's for my rent tomorrow.",
+      "label": "cancel_transfer",
+      "id": "test-03",
+      "pred": "cancel_transfer",
+      "reasoning": "The customer is expressing urgency about correcting a payment error, which indicates a need to cancel the transfer. The mention of needing it fixed quickly suggests that the transfer is still pending or needs to be addressed immediately.",
+      "correct": true
+    },
+    {
+      "text": "How many days does it take until funds are in my account?",
+      "label": "transfer_timing",
+      "id": "test-04",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the duration it takes for funds to be available in their account, which aligns with a timing inquiry rather than a status update on a pending transfer.",
+      "correct": true
+    },
+    {
+      "text": "My transfer is still coming up as pending.",
+      "label": "pending_transfer",
+      "id": "test-05",
+      "pred": "pending_transfer",
+      "reasoning": "The customer explicitly states that their transfer is still pending, indicating that it has not yet been completed. This aligns with the intent of 'pending_transfer'.",
+      "correct": true
+    },
+    {
+      "text": "I would like to know why my transfer was declined.",
+      "label": "declined_transfer",
+      "id": "test-06",
+      "pred": "declined_transfer",
+      "reasoning": "The customer is inquiring about the reason for their transfer being rejected, which aligns with the intent of a declined transfer.",
+      "correct": true
+    },
+    {
+      "text": "My transfer has been declined and I know it should have went through.",
+      "label": "declined_transfer",
+      "id": "test-07",
+      "pred": "declined_transfer",
+      "reasoning": "The customer explicitly states that their transfer has been declined, indicating that the bank actively rejected the transaction. This aligns with the label 'declined_transfer'.",
+      "correct": true
+    },
+    {
+      "text": "I'd like to cancel a transfer",
+      "label": "cancel_transfer",
+      "id": "test-08",
+      "pred": "cancel_transfer",
+      "reasoning": "The customer is explicitly requesting to cancel a transfer, which directly aligns with the intent of canceling a transaction.",
+      "correct": true
+    },
+    {
+      "text": "I made a bank transfer and my account balance did not show it.",
+      "label": "balance_not_updated_after_bank_transfer",
+      "id": "test-09",
+      "pred": "balance_not_updated_after_bank_transfer",
+      "reasoning": "The customer is indicating that they made a transfer but their account balance has not been updated to reflect this, suggesting an issue with the transfer process.",
+      "correct": true
+    },
+    {
+      "text": "I want to go back on what I did this morning",
+      "label": "cancel_transfer",
+      "id": "test-10",
+      "pred": "cancel_transfer",
+      "reasoning": "The customer is expressing a desire to revert a transaction they initiated, which suggests they want to cancel it. Therefore, the most appropriate label is 'cancel_transfer'.",
+      "correct": true
+    },
+    {
+      "text": "I am still waiting for a transaction to be completed",
+      "label": "transfer_not_received_by_recipient",
+      "id": "test-11",
+      "pred": "pending_transfer",
+      "reasoning": "The customer is indicating that they are waiting for a transaction, which suggests that the transfer is still in process and has not yet been completed.",
+      "correct": false
+    },
+    {
+      "text": "How many days does a transfer from the US take?",
+      "label": "transfer_timing",
+      "id": "test-12",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring specifically about the duration of a transfer, which aligns with the intent of understanding transfer timing rather than the status of a pending transfer.",
+      "correct": true
+    },
+    {
+      "text": "When I submit a transfer, it is being declined.  The information I put in has been reviewed.",
+      "label": "declined_transfer",
+      "id": "test-13",
+      "pred": "declined_transfer",
+      "reasoning": "The customer explicitly mentions that their transfer is being declined, indicating that the bank or system has actively rejected the transaction. This aligns with the label 'declined_transfer'.",
+      "correct": true
+    },
+    {
+      "text": "I would like to know why my payment is still pending, can you help?",
+      "label": "pending_transfer",
+      "id": "test-14",
+      "pred": "pending_transfer",
+      "reasoning": "The customer is inquiring about the status of their payment, indicating that it is still pending, which aligns with the intent of wanting to know about a transfer that has not yet completed.",
+      "correct": true
+    },
+    {
+      "text": "Why is my transfer not done yet?",
+      "label": "pending_transfer",
+      "id": "test-15",
+      "pred": "pending_transfer",
+      "reasoning": "The customer is inquiring about the status of their transfer, indicating that it is still pending and they are waiting for it to be completed.",
+      "correct": true
+    },
+    {
+      "text": "Please help me make a transfer. I keep receiving an error and I'm trying to make the initial mortgage payment for a flat I'm buying. What is the deal here?",
+      "label": "failed_transfer",
+      "id": "test-16",
+      "pred": "cancel_transfer",
+      "reasoning": "The customer is experiencing an error while trying to initiate a transfer, indicating a potential issue with the transfer process. This suggests that the transfer is still pending and they may also want to cancel the attempt due to the error.",
+      "correct": false
+    },
+    {
+      "text": "I am still awaiting the completion of the transaction.",
+      "label": "transfer_not_received_by_recipient",
+      "id": "test-17",
+      "pred": "pending_transfer",
+      "reasoning": "The customer is indicating that they are waiting for a transaction to be completed, which suggests that the transfer is still in process.",
+      "correct": false
+    },
+    {
+      "text": "When will I see my new balance after making my bank transfer?",
+      "label": "balance_not_updated_after_bank_transfer",
+      "id": "test-18",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the timing of when their new balance will be updated after a transfer, which aligns with a question about transfer timing rather than the status of a pending transfer.",
+      "correct": false
+    },
+    {
+      "text": "Where is the transfer I started?",
+      "label": "transfer_not_received_by_recipient",
+      "id": "test-19",
+      "pred": "pending_transfer",
+      "reasoning": "The customer is inquiring about the status of a transfer they initiated, which suggests they are waiting for it to complete. This aligns with the intent of a pending transfer.",
+      "correct": false
+    },
+    {
+      "text": "Hello I made a bank transfer couple hours ago from my UK account but it doesn't show up yet. Can you please check if everything is alright with it?",
+      "label": "balance_not_updated_after_bank_transfer",
+      "id": "test-20",
+      "pred": "pending_transfer",
+      "reasoning": "The customer is inquiring about the status of a transfer that they initiated a couple of hours ago and is expressing concern that it has not yet appeared, which indicates that the transfer is still pending.",
+      "correct": false
+    },
+    {
+      "text": "I made a transfer a few hours ago from a UK banking account.  I do not yet see the transfer.  Please check on this for me.",
+      "label": "balance_not_updated_after_bank_transfer",
+      "id": "test-21",
+      "pred": "pending_transfer",
+      "reasoning": "The customer is inquiring about the status of a transfer that they made a few hours ago and has not yet been received, indicating that the transfer is still pending.",
+      "correct": false
+    },
+    {
+      "text": "transaction failed?",
+      "label": "transfer_not_received_by_recipient",
+      "id": "test-22",
+      "pred": "failed_transfer",
+      "reasoning": "The customer is inquiring about a transaction that did not go through, which aligns with the label for a transfer that was attempted but did not succeed.",
+      "correct": false
+    },
+    {
+      "text": "How long until the money is in my account?",
+      "label": "transfer_timing",
+      "id": "test-23",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the expected duration for the transfer to complete, which aligns with a timing inquiry rather than a status update on a pending transfer.",
+      "correct": true
+    },
+    {
+      "text": "How long does it take for a money transfer to show?",
+      "label": "pending_transfer",
+      "id": "test-24",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the duration of a money transfer, which aligns with questions about when a transfer will occur rather than its current status. Therefore, the appropriate label is 'transfer_timing'.",
+      "correct": false
+    },
+    {
+      "text": "I have a pending transfer",
+      "label": "pending_transfer",
+      "id": "test-25",
+      "pred": "pending_transfer",
+      "reasoning": "The customer explicitly mentions having a pending transfer, indicating that the transfer is still in process and has not yet been completed.",
+      "correct": true
+    },
+    {
+      "text": "Why isn't the transfer on my account showing up?",
+      "label": "balance_not_updated_after_bank_transfer",
+      "id": "test-26",
+      "pred": "pending_transfer",
+      "reasoning": "The customer is inquiring about the status of a transfer that is not appearing in their account, which suggests that the transfer is still pending and has not yet been completed.",
+      "correct": false
+    },
+    {
+      "text": "Why did a transfer get declined?",
+      "label": "declined_transfer",
+      "id": "test-27",
+      "pred": "declined_transfer",
+      "reasoning": "The customer is inquiring about the reason for a transfer being rejected, which aligns with the label for a transfer that was actively rejected by the bank or system.",
+      "correct": true
+    },
+    {
+      "text": "My transfer hasn't gone through yet.",
+      "label": "pending_transfer",
+      "id": "test-28",
+      "pred": "pending_transfer",
+      "reasoning": "The customer is indicating that their transfer is still in process and has not been completed, which aligns with the intent of a pending transfer.",
+      "correct": true
+    },
+    {
+      "text": "My transfer is pending.",
+      "label": "balance_not_updated_after_bank_transfer",
+      "id": "test-29",
+      "pred": "pending_transfer",
+      "reasoning": "The customer explicitly states that their transfer is pending, indicating that it has not yet been completed.",
+      "correct": false
+    },
+    {
+      "text": "I submitted a transaction to the incorrect account.",
+      "label": "cancel_transfer",
+      "id": "test-30",
+      "pred": "cancel_transfer",
+      "reasoning": "The customer is indicating that they need to address a transaction that was submitted incorrectly, which suggests they want to cancel the transfer rather than inquire about its status or timing.",
+      "correct": true
+    },
+    {
+      "text": "My transfer will not go through.",
+      "label": "failed_transfer",
+      "id": "test-31",
+      "pred": "failed_transfer",
+      "reasoning": "The customer indicates that their transfer is not being completed, which suggests that the transfer was attempted but did not succeed at all, aligning with a 'failed_transfer' label.",
+      "correct": true
+    },
+    {
+      "text": "Why was I not able to complete a transfer?",
+      "label": "failed_transfer",
+      "id": "test-32",
+      "pred": "pending_transfer",
+      "reasoning": "The customer is inquiring about their inability to complete a transfer, which suggests they may be experiencing a problem with the transfer process. This could indicate a 'declined_transfer' if it was actively rejected, but without explicit mention of rejection, it leans more towards a broader issue related to transfer permissions or status.",
+      "correct": false
+    },
+    {
+      "text": "If I need to do a quick transfer from China, how long should I expect the transfer to take?",
+      "label": "transfer_timing",
+      "id": "test-33",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring specifically about the duration of a transfer from China, which aligns with a question about timing rather than the status of a transfer.",
+      "correct": true
+    },
+    {
+      "text": "I need help cancelling a transaction.",
+      "label": "cancel_transfer",
+      "id": "test-34",
+      "pred": "cancel_transfer",
+      "reasoning": "The customer is explicitly requesting assistance with cancelling a transaction, which directly aligns with the intent to cancel a transfer.",
+      "correct": true
+    },
+    {
+      "text": "My transfer did not go through.",
+      "label": "failed_transfer",
+      "id": "test-35",
+      "pred": "failed_transfer",
+      "reasoning": "The customer indicates that their transfer was attempted but did not succeed, which aligns with the definition of a failed transfer.",
+      "correct": true
+    },
+    {
+      "text": "The receipient doesn't see my money transfer.",
+      "label": "transfer_not_received_by_recipient",
+      "id": "test-36",
+      "pred": "transfer_not_received_by_recipient",
+      "reasoning": "The customer is expressing concern that the recipient has not received the money transfer, indicating a potential issue with the transfer itself rather than just timing.",
+      "correct": true
+    },
+    {
+      "text": "Why hasn't my recipient received their money?",
+      "label": "transfer_not_received_by_recipient",
+      "id": "test-37",
+      "pred": "transfer_not_received_by_recipient",
+      "reasoning": "The customer is expressing concern that the transfer has not been received by the recipient, indicating a potential issue with the transfer itself rather than just timing.",
+      "correct": true
+    },
+    {
+      "text": "Why did my transfer not go through?",
+      "label": "failed_transfer",
+      "id": "test-38",
+      "pred": "failed_transfer",
+      "reasoning": "The customer is inquiring about the status of a transfer that was attempted but did not succeed, which aligns with the label for a transfer that failed to complete.",
+      "correct": true
+    },
+    {
+      "text": "I completed an in country transfer a few days ago and was sure to check the account information several times since the transaction was completed, but the funds are still not available. What is the problem?",
+      "label": "transfer_not_received_by_recipient",
+      "id": "test-39",
+      "pred": "transfer_not_received_by_recipient",
+      "reasoning": "The customer indicates that the transfer was completed but the funds are still not available, suggesting a potential issue with the transfer not being received by the recipient.",
+      "correct": true
+    },
+    {
+      "text": "How long do I have to wait for a transfer from the US?",
+      "label": "transfer_timing",
+      "id": "test-40",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the duration of a transfer, which aligns with the intent of understanding when the transfer will occur rather than expressing concern about a pending transfer or its status.",
+      "correct": true
+    },
+    {
+      "text": "Why would my transfer be declined? I've checked that I've put in all the right details, but it is still declined.",
+      "label": "declined_transfer",
+      "id": "test-41",
+      "pred": "declined_transfer",
+      "reasoning": "The customer is explicitly stating that their transfer was declined and has verified their details, indicating a clear issue with the transfer being rejected by the bank or system.",
+      "correct": true
+    },
+    {
+      "text": "Why has my transfer failed?",
+      "label": "failed_transfer",
+      "id": "test-42",
+      "pred": "failed_transfer",
+      "reasoning": "The customer is inquiring about a transfer that was attempted but did not go through, which aligns with the label for a transfer that has failed.",
+      "correct": true
+    },
+    {
+      "text": "How long does it take to process transfers from Europe?",
+      "label": "transfer_timing",
+      "id": "test-43",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring about the duration of transfers, which aligns with the intent of understanding transfer timing rather than the status of a specific transfer.",
+      "correct": true
+    },
+    {
+      "text": "Approximately how long will an urgent transfer from China take?",
+      "label": "transfer_timing",
+      "id": "test-44",
+      "pred": "transfer_timing",
+      "reasoning": "The customer is inquiring specifically about the duration of an urgent transfer, which aligns with the intent of understanding transfer timing rather than the status of a pending transfer.",
+      "correct": true
+    },
+    {
+      "text": "My transfer did not seem to work.",
+      "label": "failed_transfer",
+      "id": "test-45",
+      "pred": "pending_transfer",
+      "reasoning": "The customer indicates uncertainty about the success of their transfer, suggesting it may still be pending rather than failed. Therefore, 'pending_transfer' is the most appropriate label.",
+      "correct": false
+    },
+    {
+      "text": "I double checked that I have the correct account details , they're right for sure. Transfer is still pending since forever. What should be done now?",
+      "label": "pending_transfer",
+      "id": "test-46",
+      "pred": "pending_transfer",
+      "reasoning": "The customer indicates that the transfer is still pending and expresses urgency about the situation, which aligns with the label 'pending_transfer'.",
+      "correct": true
+    },
+    {
+      "text": "I made a mistake with a transaction!",
+      "label": "cancel_transfer",
+      "id": "test-47",
+      "pred": "cancel_transfer",
+      "reasoning": "The customer indicates a mistake with a transaction, which suggests they may want to cancel it. Therefore, the most appropriate label is 'cancel_transfer'.",
+      "correct": true
+    },
+    {
+      "text": "Is there any way to cancel a transfer?",
+      "label": "cancel_transfer",
+      "id": "test-48",
+      "pred": "cancel_transfer",
+      "reasoning": "The customer is inquiring about the possibility of canceling a transfer, which directly aligns with the intent to cancel a transfer.",
+      "correct": true
+    }
+  ]
+}

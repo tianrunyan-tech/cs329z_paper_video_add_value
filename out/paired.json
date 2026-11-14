@@ -1,0 +1,16 @@
+{
+  "B": {
+    "A right -> wrong": 3,
+    "A wrong -> right": 1,
+    "both right": 34,
+    "both wrong": 11,
+    "mcnemar_p": 0.625
+  },
+  "C": {
+    "A right -> wrong": 3,
+    "A wrong -> right": 1,
+    "both right": 34,
+    "both wrong": 11,
+    "mcnemar_p": 0.625
+  }
+}

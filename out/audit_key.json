@@ -1,0 +1,408 @@
+[
+  {
+    "item": "L01",
+    "id": "C13",
+    "text": "When a customer asks about reverting a transaction, consider if it relates to 'cancel_transfer' or if it could also imply issues with 'failed_transfer' or 'pending_transfer' depending on the context.",
+    "source": "build-06",
+    "source_correct": true
+  },
+  {
+    "item": "L02",
+    "id": "B14",
+    "text": "When a customer mentions receiving a specific error message like 'declined', it should be classified as 'declined_transfer'.",
+    "source": "build-12",
+    "source_correct": true
+  },
+  {
+    "item": "L03",
+    "id": "B12",
+    "text": "Look for cues indicating that a transfer has already been initiated but not reflected in the balance to classify as 'balance_not_updated_after_bank_transfer'.",
+    "source": "build-08",
+    "source_correct": false
+  },
+  {
+    "item": "L04",
+    "id": "B03",
+    "text": "Clarify the context of the inquiry: If the customer mentions a specific time frame or expresses concern about their own account status, it may indicate a balance update issue rather than just a transfer receipt issue.",
+    "source": "build-00",
+    "source_correct": false
+  },
+  {
+    "item": "L05",
+    "id": "C19",
+    "text": "Differentiate between 'cancel_transfer' and 'pending_transfer' by assessing if the transaction is still in progress or has already been completed. If the transaction is completed, 'cancel_transfer' may not be applicable.",
+    "source": "build-09",
+    "source_correct": true
+  },
+  {
+    "item": "L06",
+    "id": "B07",
+    "text": "The label 'cancel_transfer' is appropriate when a customer explicitly asks about reversing or canceling a transaction. Ensure to look for keywords like 'revert' or 'cancel' in the message.",
+    "source": "build-06",
+    "source_correct": true
+  },
+  {
+    "item": "L07",
+    "id": "C22",
+    "text": "Recognize that repeated attempts mentioned in the message can indicate a 'transfer_not_received_by_recipient' if the transfer was initiated but not acknowledged by the recipient, rather than labeling it as a 'failed_transfer' without further context.",
+    "source": "build-11",
+    "source_correct": true
+  },
+  {
+    "item": "L08",
+    "id": "C23",
+    "text": "Differentiate between inquiries about the timing of a transfer and those about the status of a pending transfer. If a customer asks about how long a transfer takes, consider if they are also implying they are waiting for a transfer to complete, which would suggest 'pending_transfer'.",
+    "source": "build-13",
+    "source_correct": true
+  },
+  {
+    "item": "L09",
+    "id": "B18",
+    "text": "Consider the context of the inquiry: If a customer is asking about the timing of a transfer and also expresses that the recipient needs the money urgently, prioritize the label 'transfer_not_received_by_recipient' over 'transfer_timing.'",
+    "source": "build-14",
+    "source_correct": false
+  },
+  {
+    "item": "L10",
+    "id": "B11",
+    "text": "Differentiate between 'transfer_timing' and 'balance_not_updated_after_bank_transfer': 'transfer_timing' is used when the customer is asking about when a transfer will arrive, while 'balance_not_updated_after_bank_transfer' is used when the customer is concerned that their balance does not reflect a completed transfer.",
+    "source": "build-08",
+    "source_correct": false
+  },
+  {
+    "item": "L11",
+    "id": "B01",
+    "text": "Differentiate between 'transfer_not_received_by_recipient' and 'balance_not_updated_after_bank_transfer': The former is used when the sender is unsure if the recipient received the funds, while the latter applies when the sender is concerned that their own balance has not been updated after the transfer.",
+    "source": "build-00",
+    "source_correct": false
+  },
+  {
+    "item": "L12",
+    "id": "B20",
+    "text": "Differentiate 'transfer_timing' from 'declined_transfer' by identifying if the customer is asking about the status of a transfer that has already been initiated versus a transfer that cannot proceed.",
+    "source": "build-16",
+    "source_correct": false
+  },
+  {
+    "item": "L13",
+    "id": "C15",
+    "text": "Use 'pending_transfer' for inquiries about transfers that are not yet completed: If a customer is unable to transfer funds, it may indicate that the transfer is still pending rather than failed.",
+    "source": "build-07",
+    "source_correct": true
+  },
+  {
+    "item": "L14",
+    "id": "C31",
+    "text": "Always assess the emotional tone of the message; frustration can indicate multiple underlying issues, so ensure the label chosen captures the specific nature of the problem.",
+    "source": "build-17",
+    "source_correct": false
+  },
+  {
+    "item": "L15",
+    "id": "B10",
+    "text": "When a customer expresses that they were unable to complete a transfer, it should be classified as 'failed_transfer' rather than any other label, as it directly indicates a failure in the transfer process.",
+    "source": "build-07",
+    "source_correct": true
+  },
+  {
+    "item": "L16",
+    "id": "B15",
+    "text": "Ensure to differentiate between 'declined_transfer' and 'failed_transfer'; 'declined_transfer' is used when the transfer attempt is actively rejected, while 'failed_transfer' may refer to a broader range of issues that prevent the transfer from completing.",
+    "source": "build-12",
+    "source_correct": true
+  },
+  {
+    "item": "L17",
+    "id": "C01",
+    "text": "Differentiate between inquiries about transfer status (which may not have a specific label) and statements about transfers not being received. Use a more general label for status inquiries when specific labels do not apply.",
+    "source": "build-00",
+    "source_correct": false
+  },
+  {
+    "item": "L18",
+    "id": "C07",
+    "text": "When a customer mentions a transaction error and urgency for a new transaction, consider both 'cancel_transfer' and 'pending_transfer' as relevant labels.",
+    "source": "build-03",
+    "source_correct": true
+  },
+  {
+    "item": "L19",
+    "id": "B21",
+    "text": "When a customer mentions issues related to merchants or specific conditions affecting their transfer, prioritize 'declined_transfer' over 'transfer_timing'.",
+    "source": "build-16",
+    "source_correct": false
+  },
+  {
+    "item": "L20",
+    "id": "C03",
+    "text": "Ensure that the labels used reflect the nature of the inquiry; if no exact match exists, opt for a broader label that encompasses the customer's intent.",
+    "source": "build-00",
+    "source_correct": false
+  },
+  {
+    "item": "L21",
+    "id": "B17",
+    "text": "Look for cues of urgency or concern about receipt: If a customer mentions urgency regarding a transfer, it may indicate that they are worried about the transfer not being received, rather than just asking about timing.",
+    "source": "build-14",
+    "source_correct": false
+  },
+  {
+    "item": "L22",
+    "id": "C25",
+    "text": "When classifying messages related to transfer timing, pay attention to cues indicating urgency, as they can reinforce the intent behind the inquiry.",
+    "source": "build-14",
+    "source_correct": false
+  },
+  {
+    "item": "L23",
+    "id": "C27",
+    "text": "The label 'transfer_timing' should be used for inquiries specifically about when a transfer will occur, not for questions about the status of a transfer related to merchant support.",
+    "source": "build-16",
+    "source_correct": false
+  },
+  {
+    "item": "L24",
+    "id": "B19",
+    "text": "For the label 'declined_transfer', look for cues indicating that a transfer cannot be completed due to external factors, such as unsupported merchants or restrictions.",
+    "source": "build-16",
+    "source_correct": false
+  },
+  {
+    "item": "L25",
+    "id": "C18",
+    "text": "Differentiate between 'transfer_timing' and 'pending_transfer' by recognizing that 'pending_transfer' indicates the transfer is still in process, while 'transfer_timing' focuses on the expected arrival time.",
+    "source": "build-08",
+    "source_correct": false
+  },
+  {
+    "item": "L26",
+    "id": "C20",
+    "text": "Differentiate between 'failed_transfer' and 'pending_transfer' by assessing whether the customer indicates that the transfer was initiated but not completed ('pending_transfer') versus a transfer that was attempted but did not succeed at all ('failed_transfer').",
+    "source": "build-11",
+    "source_correct": true
+  },
+  {
+    "item": "L27",
+    "id": "C08",
+    "text": "If a customer requests a refund due to an error in account details, prioritize 'cancel_transfer' but also assess if it relates to a 'pending_transfer' situation.",
+    "source": "build-03",
+    "source_correct": true
+  },
+  {
+    "item": "L28",
+    "id": "B23",
+    "text": "Look for cues of frustration or confusion about the transfer process: If a customer states that their transfer is being rejected without clear reasons, it may indicate a 'failed_transfer' rather than a 'declined_transfer'.",
+    "source": "build-17",
+    "source_correct": false
+  },
+  {
+    "item": "L29",
+    "id": "B24",
+    "text": "Assess the context of the customer's message: If the customer believes their information is correct and expresses confusion about the rejection, lean towards classifying it as 'failed_transfer' rather than 'declined_transfer'.",
+    "source": "build-17",
+    "source_correct": false
+  },
+  {
+    "item": "L30",
+    "id": "B13",
+    "text": "Ensure to assess whether the customer is asking about the status of a transfer or the reflection of that transfer in their account balance to avoid misclassification.",
+    "source": "build-08",
+    "source_correct": false
+  },
+  {
+    "item": "L31",
+    "id": "C06",
+    "text": "Ensure to evaluate all aspects of the customer's message to determine if multiple labels could apply, rather than focusing on just one.",
+    "source": "build-01",
+    "source_correct": false
+  },
+  {
+    "item": "L32",
+    "id": "C05",
+    "text": "When a customer mentions that a transfer is still pending, consider labeling it as 'pending_transfer' even if they also express concerns about timing.",
+    "source": "build-01",
+    "source_correct": false
+  },
+  {
+    "item": "L33",
+    "id": "C30",
+    "text": "If a customer mentions that their information is correct but still faces issues, it may indicate a potential 'failed_transfer' scenario if the transfer was attempted but did not go through, rather than just a decline.",
+    "source": "build-17",
+    "source_correct": false
+  },
+  {
+    "item": "L34",
+    "id": "C32",
+    "text": "Differentiate between inquiries about the duration of transfers (transfer_timing) and concerns about whether a transfer has been received by the recipient (transfer_not_received_by_recipient).",
+    "source": "build-18",
+    "source_correct": false
+  },
+  {
+    "item": "L35",
+    "id": "C33",
+    "text": "When a customer expresses urgency about a transfer not being received, prioritize that concern over general timing questions.",
+    "source": "build-18",
+    "source_correct": false
+  },
+  {
+    "item": "L36",
+    "id": "C10",
+    "text": "When a customer mentions 'pending', consider both 'pending_transfer' and 'transfer_timing' as potential labels, as they can be closely related.",
+    "source": "build-04",
+    "source_correct": false
+  },
+  {
+    "item": "L37",
+    "id": "C29",
+    "text": "When a customer expresses confusion about their ability to perform a transfer, consider the label 'declined_transfer' only if they explicitly mention a rejection; otherwise, explore broader issues related to transfer permissions.",
+    "source": "build-17",
+    "source_correct": false
+  },
+  {
+    "item": "L38",
+    "id": "C26",
+    "text": "When a customer asks about checking the status of a transfer, it may indicate a concern that could relate to 'pending_transfer' or 'transfer_not_received_by_recipient', depending on the context, rather than timing.",
+    "source": "build-16",
+    "source_correct": false
+  },
+  {
+    "item": "L39",
+    "id": "C11",
+    "text": "Look for keywords in the message that indicate specific concerns, such as 'how long' which suggests a timing inquiry, but also consider the overall context of the message.",
+    "source": "build-04",
+    "source_correct": false
+  },
+  {
+    "item": "L40",
+    "id": "C21",
+    "text": "Use cues like 'doesn't seem to be working' to identify 'pending_transfer' when the customer is unsure if the transfer was initiated successfully, rather than assuming it has failed.",
+    "source": "build-11",
+    "source_correct": true
+  },
+  {
+    "item": "L41",
+    "id": "C04",
+    "text": "Differentiate between inquiries about the duration of a transfer ('transfer_timing') and the status of a transfer that is still pending ('pending_transfer').",
+    "source": "build-01",
+    "source_correct": false
+  },
+  {
+    "item": "L42",
+    "id": "B06",
+    "text": "Always prioritize explicit status indicators in customer messages, such as 'pending', to determine the most accurate label.",
+    "source": "build-01",
+    "source_correct": false
+  },
+  {
+    "item": "L43",
+    "id": "B09",
+    "text": "When classifying messages, focus on the specific action the customer wants to take; if they are asking about stopping a transaction, it should be labeled as 'cancel_transfer' rather than any other transfer-related label.",
+    "source": "build-06",
+    "source_correct": true
+  },
+  {
+    "item": "L44",
+    "id": "B08",
+    "text": "Differentiate between 'cancel_transfer' and 'pending_transfer' by noting that 'pending_transfer' involves inquiries about ongoing transfers that have not yet completed, while 'cancel_transfer' is about stopping a transaction altogether.",
+    "source": "build-06",
+    "source_correct": true
+  },
+  {
+    "item": "L45",
+    "id": "B16",
+    "text": "Differentiate between inquiries about timing and concerns about receipt: 'transfer_timing' should be used for questions about how long a transfer will take, while 'transfer_not_received_by_recipient' should be used when the customer indicates that the recipient has not received the funds.",
+    "source": "build-14",
+    "source_correct": false
+  },
+  {
+    "item": "L46",
+    "id": "C14",
+    "text": "Differentiate between 'failed_transfer' and 'declined_transfer': 'failed_transfer' should be used when a transfer was attempted but did not go through, while 'declined_transfer' should be used when a transfer was actively rejected by the bank or system.",
+    "source": "build-07",
+    "source_correct": true
+  },
+  {
+    "item": "L47",
+    "id": "C17",
+    "text": "Consider using 'transfer_not_received_by_recipient' when the customer expresses concern that the transfer has not been received, as this indicates a potential issue with the transfer rather than just timing.",
+    "source": "build-08",
+    "source_correct": false
+  },
+  {
+    "item": "L48",
+    "id": "C24",
+    "text": "When a customer asks for help regarding a transfer, assess if they are inquiring about timing or status. If the inquiry suggests they are waiting for a transfer, prioritize 'pending_transfer' over 'transfer_timing'.",
+    "source": "build-13",
+    "source_correct": true
+  },
+  {
+    "item": "L49",
+    "id": "C28",
+    "text": "If a message does not fit any of the provided labels, it is important to acknowledge that and suggest a need for additional labels that cover inquiries about unsupported merchants or transfer request statuses.",
+    "source": "build-16",
+    "source_correct": false
+  },
+  {
+    "item": "L50",
+    "id": "C09",
+    "text": "Always evaluate the context of urgency in customer messages, as it may indicate multiple intents that need to be addressed.",
+    "source": "build-03",
+    "source_correct": true
+  },
+  {
+    "item": "L51",
+    "id": "C34",
+    "text": "Ensure to consider the context of the message; if a customer mentions a specific time frame and expresses concern about the recipient not receiving the funds, it likely indicates a problem with the transfer rather than just a question about timing.",
+    "source": "build-18",
+    "source_correct": false
+  },
+  {
+    "item": "L52",
+    "id": "B22",
+    "text": "Differentiate between 'declined_transfer' and 'failed_transfer': Use 'declined_transfer' when the customer mentions specific reasons for rejection, and 'failed_transfer' when the reason for failure is unclear or unspecified.",
+    "source": "build-17",
+    "source_correct": false
+  },
+  {
+    "item": "L53",
+    "id": "B02",
+    "text": "Look for cues indicating balance concerns: Phrases like 'my balance has not changed' or 'has safely arrived' can indicate that the customer is worried about their own account balance rather than just the recipient's receipt.",
+    "source": "build-00",
+    "source_correct": false
+  },
+  {
+    "item": "L54",
+    "id": "C12",
+    "text": "Differentiate between 'transfer_timing' and 'pending_transfer' by assessing whether the customer is simply asking about the expected arrival time or expressing concern about a transfer that has not yet been received.",
+    "source": "build-05",
+    "source_correct": true
+  },
+  {
+    "item": "L55",
+    "id": "C02",
+    "text": "When a customer asks if a transfer has arrived, consider that they may be expressing concern about timing or pending status, which could align with 'pending_transfer' if the transfer is still in process.",
+    "source": "build-00",
+    "source_correct": false
+  },
+  {
+    "item": "L56",
+    "id": "B04",
+    "text": "When a customer explicitly states that a transfer is 'pending', it should be classified as 'pending_transfer' rather than 'transfer_timing', which is more general.",
+    "source": "build-01",
+    "source_correct": false
+  },
+  {
+    "item": "L57",
+    "id": "B05",
+    "text": "'transfer_timing' should be used when the customer is inquiring about the expected duration without mentioning the current status of the transfer.",
+    "source": "build-01",
+    "source_correct": false
+  },
+  {
+    "item": "L58",
+    "id": "C16",
+    "text": "Clarify the context of inability: If a customer states they were unable to transfer funds, it is important to determine if they mean the transfer was not initiated, was declined, or was pending. This can help in selecting the correct label.",
+    "source": "build-07",
+    "source_correct": true
+  }
+]

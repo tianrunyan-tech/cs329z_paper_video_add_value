@@ -1,0 +1,149 @@
+[
+  {
+    "text": "What is the reason why the transfer shows as pending?",
+    "label": "transfer_timing",
+    "id": "pilot-00",
+    "reasoning": "The customer is inquiring about the status of a transfer that is currently pending, which relates to the timing of the transfer process.",
+    "correct": false
+  },
+  {
+    "text": "Am I able to stop a transfer?",
+    "label": "cancel_transfer",
+    "id": "pilot-01",
+    "reasoning": "The customer is inquiring about the possibility of stopping a transfer, which indicates an intent to cancel a transfer.",
+    "correct": true
+  },
+  {
+    "text": "Why does my card continually get declined? I thought I had enough money in there but I've tried several times now and it still isn't working.",
+    "label": "declined_transfer",
+    "id": "pilot-02",
+    "reasoning": "The customer is experiencing issues with their card being declined despite believing they have sufficient funds, which indicates a problem with the transfer or transaction process.",
+    "correct": true
+  },
+  {
+    "text": "Can you tell me why my transfer is failing and help resolve?",
+    "label": "failed_transfer",
+    "id": "pilot-03",
+    "reasoning": "The customer is inquiring about a transfer that is not successful and is seeking assistance to resolve the issue.",
+    "correct": true
+  },
+  {
+    "text": "I did a transfer but its still pending",
+    "label": "pending_transfer",
+    "id": "pilot-04",
+    "reasoning": "The customer is indicating that their transfer has not yet completed and is still in a pending state.",
+    "correct": true
+  },
+  {
+    "text": "Hi I'm sending some money over to an investment bank I do business and the transaction is being rejected. I'm not sure why as I think I have the right details.",
+    "label": "declined_transfer",
+    "id": "pilot-05",
+    "reasoning": "The customer is experiencing an issue where their transaction is being rejected, indicating that the transfer cannot be completed. This aligns with the intent of a declined transfer.",
+    "correct": false
+  },
+  {
+    "text": "My balance didn't change after I transferred some money.",
+    "label": "balance_not_updated_after_bank_transfer",
+    "id": "pilot-06",
+    "reasoning": "The customer is indicating that their balance has not been updated following a bank transfer, which suggests an issue with the transfer process.",
+    "correct": true
+  },
+  {
+    "text": "How long do I have to wait for Europe transfers?",
+    "label": "transfer_timing",
+    "id": "pilot-07",
+    "reasoning": "The customer is inquiring about the duration for transfers to Europe, which relates to the timing of transfers.",
+    "correct": true
+  },
+  {
+    "text": "How long do I have to wait for a US transfer?",
+    "label": "transfer_timing",
+    "id": "pilot-08",
+    "reasoning": "The customer is inquiring about the duration for a US transfer, which relates to the timing of the transfer process.",
+    "correct": true
+  },
+  {
+    "text": "please cancel the transaction",
+    "label": "cancel_transfer",
+    "id": "pilot-09",
+    "reasoning": "The customer is requesting to cancel a transaction, which directly corresponds to the intent of canceling a transfer.",
+    "correct": true
+  },
+  {
+    "text": "I need urgent help. I realize I sent my payment to the wrong account number. I made a typo. Please cancel the transfer now. There isn't an option from the app.",
+    "label": "cancel_transfer",
+    "id": "pilot-10",
+    "reasoning": "The customer is requesting to cancel a transfer due to a mistake in the account number, which indicates they want to stop the transaction.",
+    "correct": true
+  },
+  {
+    "text": "Help me. My transfer was declined. How could this happen?",
+    "label": "declined_transfer",
+    "id": "pilot-11",
+    "reasoning": "The customer is inquiring about a transfer that was not successful and specifically mentions that it was declined, which fits the intent of a declined transfer.",
+    "correct": true
+  },
+  {
+    "text": "My account isn't showing a transfer I made.",
+    "label": "balance_not_updated_after_bank_transfer",
+    "id": "pilot-12",
+    "reasoning": "The customer is indicating that a transfer they initiated is not reflected in their account, which suggests an issue with the transfer being recognized or processed.",
+    "correct": true
+  },
+  {
+    "text": "A transfer is pending.",
+    "label": "pending_transfer",
+    "id": "pilot-13",
+    "reasoning": "The customer is indicating that a transfer has not yet been completed and is still in progress.",
+    "correct": true
+  },
+  {
+    "text": "How long does it take for money to reach my account?",
+    "label": "transfer_timing",
+    "id": "pilot-14",
+    "reasoning": "The customer is inquiring about the duration it takes for a transfer to be completed, which relates to the timing of the transfer.",
+    "correct": false
+  },
+  {
+    "text": "Why can't I make a transfer?",
+    "label": "declined_transfer",
+    "id": "pilot-15",
+    "reasoning": "The customer is inquiring about the inability to make a transfer, which suggests a potential issue with the transfer process.",
+    "correct": false
+  },
+  {
+    "text": "I performed a transfer within the country the day before yesterday, but it has not gone through? Can you check on that? The account number is definitely correct, as I've checked.",
+    "label": "transfer_not_received_by_recipient",
+    "id": "pilot-16",
+    "reasoning": "The customer is inquiring about a transfer that they performed which has not been completed, indicating a potential issue with the transfer process.",
+    "correct": true
+  },
+  {
+    "text": "I just noticed my transfer was declined and I don't know why. Can you help me?",
+    "label": "declined_transfer",
+    "id": "pilot-17",
+    "reasoning": "The customer is inquiring about a transfer that was not completed due to a decline, indicating they need assistance with a declined transaction.",
+    "correct": true
+  },
+  {
+    "text": "I dont see my reciept",
+    "label": "transfer_not_received_by_recipient",
+    "id": "pilot-18",
+    "reasoning": "The customer is inquiring about a receipt, which suggests they may be concerned about a transaction that has not been confirmed or documented. However, this does not directly relate to any of the specified intents regarding transfers or balances.",
+    "correct": true
+  },
+  {
+    "text": "i've waited 2 days for a transfer to reach a retailers account, am i going to have to wait longer.",
+    "label": "transfer_timing",
+    "id": "pilot-19",
+    "reasoning": "The customer is inquiring about the duration of a transfer that has not yet reached the recipient's account, indicating a concern about the timing of the transfer.",
+    "correct": false
+  },
+  {
+    "text": "I'm waiting for a transfer from the US, how much longer?",
+    "label": "transfer_timing",
+    "id": "pilot-20",
+    "reasoning": "The customer is inquiring about the duration of a pending transfer from the US, indicating they are waiting for it to arrive.",
+    "correct": true
+  }
+]
