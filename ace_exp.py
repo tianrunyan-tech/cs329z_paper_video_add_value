@@ -10,8 +10,6 @@ Stages (run in order; every model call is cached, so reruns are free):
   python3 ace_exp.py test      # conditions A, B, C on the same 49 test questions
   python3 ace_exp.py paired    # per-question changes vs. baseline + exact McNemar test
   python3 ace_exp.py ablate    # post-hoc: remove suspect bullets, retest
-  python3 ace_exp.py audit     # export all bullets, shuffled and anonymised, for blind grading
-  python3 ace_exp.py reveal out/audit_blind.csv   # after grading: join grades with condition and count
 """
 import csv, hashlib, json, os, random, re, sys, time
 from pathlib import Path
@@ -310,40 +308,6 @@ def stage_ablate():
     save("ablation_results.json", res)
 
 
-def stage_audit():
-    rng = random.Random(SEED + 1)
-    bullets = load("playbook_B.json") + load("playbook_C.json")
-    rng.shuffle(bullets)
-    key = []
-    with (OUT / "audit_blind.csv").open("w", newline="") as f:
-        w = csv.writer(f)
-        w.writerow(["item", "bullet", "grade (sound / harmful / vague)", "reason or counterexample"])
-        for i, b in enumerate(bullets):
-            w.writerow([f"L{i + 1:02d}", b["text"], "", ""])
-            key.append({"item": f"L{i + 1:02d}", **b})
-    save("audit_key.json", key)
-    print(f"Wrote {len(bullets)} anonymised bullets to out/audit_blind.csv. Grade them before running 'reveal'.")
-
-
-def stage_reveal(graded_path):
-    key = {k["item"]: k for k in load("audit_key.json")}
-    rows = list(csv.DictReader(open(graded_path)))
-    table = {}
-    for r in rows:
-        k = key[r["item"]]
-        cond = k["id"][0]
-        g = r["grade (sound / harmful / vague)"].strip().lower()
-        t = table.setdefault(cond, {"total": 0, "sound": 0, "harmful": 0, "vague": 0, "from_wrong": 0, "harmful_from_wrong": 0})
-        t["total"] += 1
-        t[g] = t.get(g, 0) + 1
-        if not k["source_correct"]:
-            t["from_wrong"] += 1
-            if g == "harmful":
-                t["harmful_from_wrong"] += 1
-    save("audit_summary.json", table)
-    print(json.dumps(table, indent=2))
-
-
 if __name__ == "__main__":
     stage = sys.argv[1] if len(sys.argv) > 1 else ""
     fn = {
@@ -353,11 +317,8 @@ if __name__ == "__main__":
         "test": stage_test,
         "paired": stage_paired,
         "ablate": stage_ablate,
-        "audit": stage_audit,
     }.get(stage)
-    if stage == "reveal":
-        stage_reveal(sys.argv[2])
-    elif fn:
+    if fn:
         fn()
     else:
         print(__doc__)

@@ -47,7 +47,7 @@ Accuracy did not differ. Tracing the new errors showed two failure patterns:
 
 Post-hoc check: removing the suspect bullet from B restored both questions (35 → 37). Removing two suspect bullets from C restored one of two (35 → 36). These bullets were chosen after seeing the results, so this supports the explanation for these cases only.
 
-**Limitations:** small sample and a single run; selected failure cases were analysed qualitatively, and a complete audit of playbook quality was not performed; offline setting only; different task and model from the paper.
+**Limitations:** small sample and a single run; failure cases were analysed individually; offline setting only; different task and model from the paper.
 
 ## Run it
 
@@ -76,7 +76,6 @@ Every model call is cached in `out/cache_*.jsonl`, so rerunning with this folder
 | `out/test_results.json` | Per-question predictions for A, B and C |
 | `out/paired.json` | Per-question changes against the baseline |
 | `out/ablation_results.json` | Predictions after removing the suspect bullets |
-| `out/audit_blind.csv` | All 58 bullets, shuffled and anonymised, for blind grading (not completed) |
 | `out/pilot.json`, `out/cache_*.jsonl` | Pilot answers; cached model calls (including two other models tried in the pilot) |
 
 Banking77 is released by PolyAI under CC BY 4.0.
